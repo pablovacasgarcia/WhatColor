@@ -16,6 +16,7 @@ casillaSolucion=-1
 pulsado=-1;
 
 function jugar(nivel){
+    vidas=3;
     resuelto=false;
     titulo = document.getElementById("titulo");
     easy = document.getElementById("easy");
@@ -23,9 +24,13 @@ function jugar(nivel){
     newgame = document.getElementById("newgame");
     divs = document.querySelectorAll("div");
     header = document.querySelector("header");
+    corazones = document.querySelectorAll("img");
 
     header.style.backgroundColor="darkcyan";
 
+    corazones.forEach(corazon => {
+        corazon.style.display="block";
+    });
 
 
     if (nivel==3){
@@ -66,11 +71,28 @@ function generarColor(){
 }
 
 function compruebaSolucion(){
-    if (pulsado==casillaSolucion){
-        divs.forEach(div => {
-            div.style.backgroundColor=solucion;
-        });
-        header.style.backgroundColor=solucion;
+    if(resuelto==false){
+        if (pulsado==casillaSolucion){
+            divs.forEach(div => {
+                div.style.backgroundColor=solucion;
+            });
+            titulo.innerHTML=("¡ENHORABUENA!");
+            header.style.backgroundColor=solucion;
+            resuelto=true;
+        } else if (divs[pulsado].style.backgroundColor!="gray") {
+            divs[pulsado].style.backgroundColor="gray"
+            vidas--;
+            corazones[vidas].style.display="none";
+            if (vidas==0){
+                divs.forEach(div => {
+                    div.style.backgroundColor="red";
+                });
+                header.style.backgroundColor="red";
+                titulo.innerHTML=("¡Te has quedado sin vidas!");
+                resuelto=true;
+            }
+        }
     }
+    
 }
 

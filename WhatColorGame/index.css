@@ -3,8 +3,8 @@ div {
     height: 170px;
     border-radius: 30px;
     margin: 20px;
-    box-shadow: 2px 2px 5px black;
 }
+
 
 section{
     display: grid;
@@ -62,14 +62,25 @@ main{
 }
 
 #newgame{
-    margin-left: 300px;
+    margin-left: 20%;
 }
 
 #easy{
-    margin-left: 700px;
+    margin-left: 45%;
 }
 
 h1{
     margin: -10px;
     font-size: 400%;
+}
+
+img {
+    width: 30px;
+}
+
+#imagenes{
+    position: absolute;
+    left: 46%;
+    top: 210px;
+    display: flex;
 }
