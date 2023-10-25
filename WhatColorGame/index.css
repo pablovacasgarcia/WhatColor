@@ -1,0 +1,22 @@
+div {
+    width: 100px;
+    height: 100px;
+}
+
+section{
+    width: 500px;
+    display: flex;
+}
+
+header{
+    background-color:darkcyan;
+    color: white;
+}
+
+nav {
+    color:gray;
+}
+
+main{
+    background-color: gray;
+}
