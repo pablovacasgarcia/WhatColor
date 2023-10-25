@@ -1,22 +1,75 @@
 div {
-    width: 100px;
-    height: 100px;
+    width: 170px;
+    height: 170px;
+    border-radius: 30px;
+    margin: 20px;
+    box-shadow: 2px 2px 5px black;
 }
 
 section{
-    width: 500px;
-    display: flex;
+    display: grid;
+    width: fit-content;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    margin-top: 50px;
 }
 
 header{
     background-color:darkcyan;
     color: white;
+    margin:-20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-right: -7px;
+    padding: 20px;
 }
 
 nav {
     color:gray;
+    background-color: white;
+    margin: -10px;
+    margin-right: -7px;
+    height: 40px;
+    padding-bottom: 11px;
+    font-size: 200%;
+}
+
+button{
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    color: gray;
+    height: 51px;
+    width:100px;
+}
+
+button:hover{
+    background-color: darkcyan;
+    color: white;
+}
+
+html{
+    background-color: gray;
+    justify-content: center;
 }
 
 main{
-    background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#newgame{
+    margin-left: 300px;
+}
+
+#easy{
+    margin-left: 700px;
+}
+
+h1{
+    margin: -10px;
+    font-size: 400%;
 }

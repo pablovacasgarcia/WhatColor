@@ -6,7 +6,7 @@ window.onload = () =>
     easy.addEventListener("click", () => {nivel=3;jugar(nivel)})
     hard.addEventListener("click", () => {nivel=6;jugar(nivel)})
     for (let i=0; i<6; i++){
-        divs[i].addEventListener("click", ()=>{pulsado=i; compruebaSolucion();})
+        divs[i].addEventListener("click", ()=>{pulsado=i; compruebaSolucion()})
     }
     
 
@@ -22,7 +22,9 @@ function jugar(nivel){
     hard = document.getElementById("hard");
     newgame = document.getElementById("newgame");
     divs = document.querySelectorAll("div");
-    header = document.querySelector("header")
+    header = document.querySelector("header");
+
+    header.style.backgroundColor="darkcyan";
 
 
 
